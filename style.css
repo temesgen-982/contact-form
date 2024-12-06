@@ -52,7 +52,7 @@ form div {
     gap: .5em;
 }
 
-@media (min-width: 1440px){
+@media (min-width: 1000px){
     form{
         max-width: 800px;
     }
