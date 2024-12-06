@@ -1,0 +1,161 @@
+@font-face {
+    font-family: Karla;
+    src: url(assets/fonts/Karla-VariableFont_wght.ttf);
+}
+
+:root{
+    --green-200-lighter: hsl(148, 38%, 91%);
+    --green-600-medium: hsl(169, 82%, 27%);
+    --red: hsl(0, 66%, 54%);
+
+    --white: hsl(0, 0%, 100%);
+    --grey-500-medium: hsl(186, 15%, 59%);
+    --grey-900-darker: hsl(187, 24%, 22%);
+
+    --fs-labels: 16px;
+
+    --ff-base: Karla;
+    
+    --fw-400: 400;
+    --fw-700: 700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    font-family: var(--ff-base);
+    background-color: var(--green-200-lighter);
+}
+
+form{
+    background-color: var(--white);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    max-width: 400px;
+    padding: 1em;
+    border-radius: .5em;
+}
+
+form div {
+    display: grid;
+    gap: .5em;
+}
+
+@media (min-width: 1440px){
+    form{
+        max-width: 800px;
+    }
+    form > div.lg-hrztal{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    form > div.lg-hrztal label{
+        grid-column: 1 / -1;
+    }
+    form > div.lg-hrztal div{
+        display: grid;
+    }
+}
+
+input, fieldset, button{
+    padding: 1em;
+    font-family: inherit;
+}
+
+button{
+    background-color: var(--green-600-medium);
+    color: var(--white);
+    border: none;
+    border-radius: .5em;
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.hidden{
+    display: none;
+}
+
+/* Styles for the error messages*/
+span{
+    color: var(--red);
+}
+
+fieldset{
+    position: relative;
+}
+
+fieldset:has(input:checked){
+    background-color: var(--green-200-lighter);
+    border: 1px solid var(--green-600-medium);
+}
+
+fieldset input[type="radio"]:checked + label::before{
+    position: absolute;
+    content: url(assets/images/icon-radio-selected.svg);
+    top: 1.5em;
+    left: .8em;
+    width: 2px;
+    height: 2px;
+}
+
+fieldset input[type="radio"]:checked{
+    appearance: none;
+}
+
+div{
+    position: relative;
+}
+
+div input[type="checkbox"]:checked + label::before{
+    position: absolute;
+    content: url(assets/images/icon-checkbox-check.svg);
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+}
+
+input[type="checkbox"]{
+    margin-right: 1em;
+}
+
+div.checkbox{
+    display: flex;
+}
+
+.sign-up-success{
+    position: absolute;
+    top: 1em;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: var(--grey-900-darker);
+    color: var(--white);
+    padding: 1em;
+    border-radius: .5em;
+}
+
+.sign-up-success h2{
+    display: flex;
+    gap: .5em;
+    margin-bottom: .5em;
+}
