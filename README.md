@@ -19,12 +19,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](assets/images/screenshot.png)
+![](assets/images/screenshot.jpg)
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Github Pages](https://temesgen-982.github.io/contact-form/)
 
 ## My process
 
@@ -38,4 +38,4 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@temesgen-982](https://www.frontendmentor.io/profile/temesgen-982)
